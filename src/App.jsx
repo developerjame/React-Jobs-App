@@ -11,6 +11,9 @@ import NotFoundPage from './pages/NotFoundPage';
 import JobPage, { jobLoader } from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
+import SignIn from './users/SignIn';
+import SignUp from './users/SignUp';
+import { CgPassword } from 'react-icons/cg';
 
 const App = () => {
   // Add New Job
@@ -62,6 +65,8 @@ const App = () => {
           loader={jobLoader}
         />
         <Route path='*' element={<NotFoundPage />} />
+        <Route path='sign-in' element={<SignIn/>}/>
+        <Route path='sign-up' element={<SignUp/>}/>
       </Route>
     )
   );
