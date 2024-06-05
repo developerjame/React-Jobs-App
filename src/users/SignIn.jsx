@@ -11,7 +11,7 @@ function SignIn() {
     const proceedLogin = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:8000/users', { email, password });
+          const response = await axios.post('http://localhost:8000/users', { em, password });
           const { token } = response.data;
           // Store token in localStorage
         } catch (error) {
